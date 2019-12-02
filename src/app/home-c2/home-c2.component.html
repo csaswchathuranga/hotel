@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">Food Details</div>
+                                <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="name" class="cols-sm-2 control-label">Food Name</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" [(ngModel)]='foodObject.name' placeholder="Enter Food Name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="cols-sm-2 control-label">Image</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" [(ngModel)]='foodObject.image' placeholder="Enter Image" />
+                                                </div>
+                                            </div>
+                                          </div>
+  
+                                            <div class="form-group">
+                                              <label for="phone" class="cols-sm-2 control-label">Description</label>
+                                              <div class="cols-sm-10">
+                                                  <div class="input-group">
+                                                      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                      <input type="text" class="form-control" [(ngModel)]='foodObject.description' placeholder="Enter Food Description" />
+                                                  </div>
+                                              </div>
+  
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="cols-sm-2 control-label">Category</label>
+                                            <div class="cols-sm-10">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                    <input type="text" class="form-control" [(ngModel)]='foodObject.category' placeholder="Enter Food Category" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                                <label for="username" class="cols-sm-2 control-label">Price</label>
+                                                <div class="cols-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                        <input type="text" class="form-control" [(ngModel)]='foodObject.price' placeholder="Enter Food's Price" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="row">
+            
+                                                    <div class="form-group col-sm-6">
+                                                            <button (click)='deleteFood()'
+                                                            class="btn btn-danger btn-lg btn-block login-button"
+                                                            *ngIf="action==='edit'"
+                                                            >Delete</button>
+                                                        </div>
+
+                                                        <div class="form-group col-sm-6"
+                                                        *ngIf='action==="new"'>
+                                                                <button (click)='saveFood()' 
+                                                                [disabled]='!foodObject.name || !foodObject.price'
+                                                                class="btn btn-success btn-lg btn-block login-button"
+                                                                >Save</button>
+                                                            </div>
+
+                                                        <div class="form-group col-sm-6"
+                                                        *ngIf='action==="edit"'>
+                                                                <button (click)='updateFood()' 
+                                                                [disabled]='!foodObject.name || !foodObject.price'
+                                                                class="btn btn-success btn-lg btn-block login-button"
+                                                                >Update</button>
+                                                            </div>
+
+
+                                        </div>
+
+                                    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    </div>

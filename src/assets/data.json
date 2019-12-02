@@ -1,0 +1,14 @@
+
+    [
+        {
+            "name":"abc",
+            "password":"123",
+            "role":"customer"
+        },
+        {
+            "name":"def",
+            "password":"123",
+            "role":"owner"
+
+        }
+    ]

@@ -1,0 +1,56 @@
+<div class="row">
+        <div class="form-group col-sm-3"
+        *ngIf="role === 'owner'"
+        >
+                <button 
+                routerLink='/homec2/new/null' 
+                class="btn btn-success btn-lg btn-block login-button"
+                >Add</button>
+            </div>
+
+            <div class="form-group col-sm-3"
+            
+            >
+                    <button 
+                    (click)='logout()' 
+                    class="btn btn-success btn-lg btn-block login-button"
+                    >Logout</button>
+                </div>
+
+
+
+
+</div>
+<div class="row">
+
+        <div class="col-sm-6 col-md-4 col-lg-4 mt-4" *ngFor="let food of foods">
+                <div class="card">
+                    <img class="card-img-top" [src]="food.image">
+                    <div class="card-block">
+                        <h4 class="card-title mt-3">{{food.name}}</h4>
+                        <div class="meta">
+                            <a>{{food.category}}</a>
+                        </div>
+                        <div class="card-text">
+                            {{food.description}}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small>{{food.price}}</small>
+                        <button class="btn btn-secondary float-right btn-sm" *ngIf="role === 'owner'"
+                        routerLink="/homec2/edit/1"
+                        routerLinkActive="active"
+                        >Edit</button>
+
+                    </div>
+
+                    
+             </div>   
+             </div>
+</div>
+
+
+
+
+
+
